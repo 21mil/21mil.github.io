@@ -96,9 +96,20 @@
       background-image: none;
       box-shadow: none !important;
     }
-    input:-webkit-autofill{
-      background-color: Transparent !important;
-      color: #FFFFFF;
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus
+    input:-webkit-autofill, 
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      border: 1px solid #3695FF;
+      -webkit-text-fill-color: #FFFFFF;
+      -webkit-box-shadow: 0 0 0px 1000px Transparent inset;
+      transition: background-color 5000s ease-in-out 0s;
     }
     .btn {
       background-color: Transparent;;
@@ -115,7 +126,6 @@
       height: 50px;
       color: #3695FF;
     }
-
     @media only screen and (max-width: 768px) {
       #main-content {
         word-wrap: none;
@@ -131,7 +141,40 @@
         width: 360px;
       }
     }
-  </style>
+    /* FOR MOBILE PHONES */
+    @media only screen 
+      and (max-device-width: 480px)
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: portrait) {
+        #main-header h2 {
+          font-size: 64px;
+        }
+        #main-content {
+          word-wrap: none;
+          width: 100% !important;
+        }
+        #main-content h1 {
+          font-size: 94px;
+        }
+        #main-content p{
+          font-size: 52px;
+        }
+        .form-control {
+          font-size: 42px;
+          height: 100px;
+        }
+        .btn {
+          width: 100%;
+          font-size: 42px;
+          height: 100px;
+        }
+        .footer p {
+          font-family: 'Lato', sans-serif;
+          font-size: 42px;
+          font-weight: 100;
+        }
+    }
+    </style>
 
   <!-- Analytics -->
   <script>
@@ -177,7 +220,7 @@
         </form>
       </div>
       <div class="footer">
-        <p>Copyright &copy; 2017 <i>21 Mil Inc.</i></p>
+        <p>Copyright &copy; 2017 21 Mil Inc.</p>
       </div>
     </div>
   </div>  
