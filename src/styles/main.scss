@@ -1,4 +1,4 @@
-$main: #000000;
+$main: #191919;
 $sec: #4B5664;
 $purple: #54516A;
 $cut: 768px;
@@ -95,7 +95,7 @@ body {
     line-height: 1;
     margin: 5px 0 10px 0;
     @media only screen and (min-width:$cut){
-      font-size: 32px;
+      font-size: 28px;
     }
   }
   .link {
@@ -268,6 +268,7 @@ body {
   }
   p {
     margin-bottom: 0px !important;
+    font-weight: lighter;
   }
   a {
     text-decoration: none;
